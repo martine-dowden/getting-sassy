@@ -1,4 +1,4 @@
-# When your Sass decides to be Sassy: Debugging Sass Mixins
+# When your Sass gets Sassy: @mixin, @include, @each and more
 
 Code presented in my blog post found at https://andromedagalactic.com/blog/when-your-sass-gets-sassy
 
