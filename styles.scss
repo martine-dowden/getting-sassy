@@ -1,0 +1,62 @@
+@use 'sass:map';
+
+$primary: #1a4d80;
+$default: #111;
+$border-color: #ddd;
+
+$danger: red;
+$warning: orange;
+$info: #1a4d80;
+
+
+* { box-sizing: border-box }
+
+body {
+  max-width: 75ch;
+  margin: 4rem auto;
+  padding: 1rem;
+  color: $default;
+  border-left: solid 1px $primary;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1, h2, h3 { color: $primary }
+
+p { line-height: 1.5 }
+
+$messages: (
+  info: (icon: ℹ️, color: $info), 
+  warning: (icon: ⚠️, color: $warning),
+  danger: (icon: ☠️, color: $danger )
+);
+
+.panel {
+  padding: 1rem;
+  border: solid 1px;
+  border-radius: 4px;
+  &::before {
+    text-transform: capitalize;
+  }
+}
+
+@mixin createPanel($name, $type) {
+  @debug $name $type;
+  $_icon: map.get($type, icon);
+  $_color: map.get($type, color);
+  .#{$name} {
+    @extend .panel;
+    background: scale-color($_color, $lightness: +97%);
+    border-color: $_color;
+    &::before {
+      content: "#{$_icon} #{$name}: ";
+      @if $name == 'danger' {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@each $key, $type in $messages {
+  @include createPanel($key, $type)
+}
+
