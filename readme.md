@@ -1,5 +1,7 @@
 # When your Sass decides to be Sassy: Debugging Sass Mixins
 
+Code presented in my blog post found at https://andromedagalactic.com/blog/when-your-sass-gets-sassy
+
 ## Setup
 
 ```
@@ -15,3 +17,13 @@ Will install packages and serve the page on localhost:8080
 $ npm run watch:sass
 ```
 
+## Build
+
+Demo is pushed out via github pages and therefore code found in the `docs` folder on the `main` branch is what get's pushed to the demo site.
+
+Demo site can be found at: https://martine-dowden.github.io/getting-sassy/
+
+To Build:
+
+1. Delete the docs folder
+2. Run `$ npm run build`
