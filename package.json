@@ -2,7 +2,7 @@
   "name": "debugging-sass",
   "version": "1.0.0",
   "description": "When your Sass gets Sassy: @mixin, @include, @each and more",
-  "main": "index.js",
+  "repository": "https://github.com/martine-dowden/getting-sassy",
   "scripts": {
     "start": "npm run build:sass && http-server -a localhost -p 8080 -c-1 ./",
     "watch:sass": "sass --watch styles.scss styles.css",
