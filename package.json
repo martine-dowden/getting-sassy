@@ -1,7 +1,7 @@
 {
   "name": "debugging-sass",
   "version": "1.0.0",
-  "description": "When your Sass decides to be Sassy",
+  "description": "When your Sass gets Sassy: @mixin, @include, @each and more",
   "main": "index.js",
   "scripts": {
     "start": "npm run build:sass && http-server -a localhost -p 8080 -c-1 ./",
