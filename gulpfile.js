@@ -14,14 +14,14 @@ function handlePages() {
       removeComments: true,
       collapseWhitespace: true,
     }))
-    .pipe(dest('./public/'));
+    .pipe(dest('./docs/'));
 }
 
 function handleCss() {
   return src('./styles.css')
     .pipe(cleanCSS())
     .pipe(rename({ extname: '-' + date +'.min.css' }))
-    .pipe(dest('./public'));
+    .pipe(dest('./docs'));
 }
 
 exports.default = series(handleCss, handlePages);

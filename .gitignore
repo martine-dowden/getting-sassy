@@ -6,4 +6,4 @@ node_modules
 *.map
 
 //  Build
-public
+docs
