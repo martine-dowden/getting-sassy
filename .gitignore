@@ -4,6 +4,3 @@ node_modules
 //  Sass
 *.css
 *.map
-
-//  Build
-docs
